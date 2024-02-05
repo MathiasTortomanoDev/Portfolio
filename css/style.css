@@ -1,0 +1,198 @@
+
+:root {
+    --primary-text-color: #E1E1E1;
+    --secondary-text-color: #ffffff;
+    --third-text-color: #cfcfcf;
+    --fourth-text-color: #AEAEAE;
+    --fifth-text-color: rgba(255, 255, 255, 0.035);
+
+    --background-color: #101010;
+    --primary-mode-color: #0e0e0e;
+    --secondary-mode-color: #000000;
+    --third-mode-color: #242424;
+    --fourth-mode-color: #d9d9d908;
+    --fifth-mode-color: #1A1A1A;
+
+    --scroll-mode-color: #282828;
+
+    --primary-bg-color: #16276B;
+    --secondary-bg-color: #94462E;
+    --third-bg-color: #16276b52;
+
+    --profile-img: brightness(1);
+    --profile-img-hover: brightness(1.4)
+}
+
+@font-face {
+    font-family: Kanit-Bold;
+    src: url('../fonts/Kanit/Kanit-Bold.ttf');
+}
+
+@font-face {
+    font-family: Kanit-Regular;
+    src: url('../fonts/Kanit/Kanit-Regular.ttf');
+}
+
+@font-face {
+    font-family: Kanit-Medium;
+    src: url('../fonts/Kanit/Kanit-Medium.ttf');
+}
+
+@font-face {
+    font-family: Kanit-Light;
+    src: url('../fonts/Kanit/Kanit-ExtraLight.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background: var(--background-color);
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body.lightMode {
+    --primary-text-color: #1e1e1e;
+    --secondary-text-color: #000000;
+    --third-text-color: #181818;
+    --fourth-text-color: #303030;
+    --fifth-text-color: rgba(31, 31, 31, 0.103); /* falta */
+
+    --background-color: #e0e0e0;
+    --primary-mode-color: #ececec;
+    --secondary-mode-color: #dddddd;
+    --third-mode-color: #b8b8b8;
+    --fourth-mode-color: #2727271f;
+    --fifth-mode-color: #2424241f;
+
+    --scroll-mode-color: #d7d7d7;
+
+    --primary-bg-color: #4236df;
+    --secondary-bg-color: #2a21a0;
+    --third-bg-color: #16276b52;
+
+    --profile-img: brightness(2);
+    --profile-img-hover: brightness(2.5);
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background: var(--scroll-mode-color);
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-button:increment,
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-bg-color);
+    border-radius: 20px;
+    border: 1px solid var(--scroll-mode-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(15, 145, 210, 0.5);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: rgba(15, 145, 210, 0.3);
+}
+  
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.article__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 1080px);
+    padding: 75px 20px;
+    box-sizing: border-box;
+}
+
+.section__title__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.section__title__shadow {
+    color: var(--fifth-text-color);
+    font-family: Kanit-Medium;
+    font-size: 180px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 120px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.section__title {
+    color: var(--primary-text-color);
+    font-family: Kanit-Light;
+    font-size: 90px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: bottom;
+    margin: 0;
+    position: relative;
+    top: -60px;
+    z-index: 100;
+}
+
+.profile__img {
+    filter: var(--profile-img);
+    transition: filter 0.2s ease;
+}
+
+.profile__img:hover {
+    filter: var(--profile-img-hover);
+}
+
+
+@media (max-width: 1080px) {
+
+    .section__title__shadow {
+        font-size: 17vw;
+        line-height: 13vw;
+    }
+
+    .section__title {
+        font-size: 8vw;
+        line-height: 5vw;
+        top: -6vw;
+    }
+
+}

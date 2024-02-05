@@ -1,0 +1,200 @@
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 1080px);
+    box-sizing: border-box;
+}
+
+.portfolio__projects {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1080px;
+}
+
+.portfolio__project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fifth-mode-color);
+}
+.portfolio__project__img__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--secondary-mode-color), transparent);
+}
+.portfolio__project__img__container {
+    background: linear-gradient(to top, black, transparent);
+}
+
+.portfolio__project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio__project__title {
+    position: absolute;
+    font-size: 25px;
+    font-family: Kanit-Regular;
+    line-height: 30px;
+    color: var(--fourth-text-color);
+    text-transform: uppercase;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    padding-left: 5px;
+    border-left: 2px solid var(--primary-bg-color);
+}
+
+.portfolio__goProject {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    bottom: 30px;
+    right: 30px;
+}
+
+.portfolio__goProject__line {
+    width: 65px;
+    height: 2px;
+    margin: 0 5px;
+    background: var(--primary-bg-color);
+}
+
+.portfolio__goProject__link {
+    margin: 0;
+    font-family: Kanit-Light;
+    font-size: 12px;
+    line-height: 10px;
+    color: var(--third-text-color);
+}
+
+.portfolio__goProject__link__arrow {
+    margin: 0;
+    border: 2px solid var(--primary-bg-color);
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateZ(45deg);
+    transform-origin: top center;
+    margin-right: -5px;
+    margin-left: 15px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    box-sizing: border-box;
+}
+
+
+.portfolio__project:hover .portfolio__goProject__link__arrow {
+    background: var(--third-bg-color);
+    transition: background 0.3s ease;
+}
+
+.portfolio__goProject__link__arrow::before, 
+.portfolio__goProject__link__arrow::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    transform: translateX(0);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio__goProject__link__arrow::before {
+    border-right: 2px solid var(--primary-bg-color);
+    border-top: 2px solid var(--primary-bg-color);
+    margin: auto;
+}
+
+.portfolio__project:hover .portfolio__goProject__link__arrow::before,
+.portfolio__project:hover .portfolio__goProject__link__arrow::after {
+    opacity: 1;
+    transform: translateX(17px) translateY(-17px);
+}
+
+.portfolio__goProject__link__arrow::after {
+    border-left: 2px solid var(--primary-bg-color);
+    border-bottom: 2px solid var(--primary-bg-color);
+    margin: auto;
+}
+
+.portfolio__project:hover .portfolio__goProject__link__arrow::after {
+    opacity: 1;
+    transform: translateX(-19px) translateY(19px);
+}
+
+.portfolio__goProject__link__arrow__stroke {
+    stroke: var(--primary-bg-color);
+}
+
+.portfolio__goProject__link__arrow__icon {
+    fill: var(--fourth-text-color);
+    height: 100%;
+    transform: rotateZ(-135deg);
+}
+
+
+@media (max-width: 1080px) {
+
+    .portfolio__projects {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+    .portfolio__project {
+        width: 100%;
+        max-width: 75vw;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .portfolio__goProject__line,
+    .portfolio__goProject__link {
+        display: none;
+    }
+
+    .portfolio__project__title {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .portfolio__goProject {
+
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .portfolio__project {
+        width: 100%;
+        max-width: 90vw;
+    }
+
+}
+
+
+@media (max-width: 340px) {
+    .portfolio__project__title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

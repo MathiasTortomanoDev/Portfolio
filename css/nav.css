@@ -1,0 +1,222 @@
+
+@font-face {
+    font-family: Kantumruy;
+    src: url('../fonts/Kantumruy/Kantumruy-Regular.ttf');
+}
+
+.nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: fixed;
+    transition: background 0.2s linear;
+    z-index: 300;
+}
+
+.nav-active { 
+    background: var(--primary-mode-color);
+}
+
+
+.nav__layout {
+    width: min(100%, 1080px);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav__left {
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    box-sizing: border-box;
+    z-index: 400;
+}
+
+.nav__left__img__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__left__img {
+    height: 55px;
+}
+
+.nav__left__switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch__container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.switch__container input[type="checkbox"] {
+    display: none;
+}
+
+.switch__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 2px #ccc;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.switch__handle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.switch__container::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa;
+    text-shadow: 1px 1px #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.switch__container input[type="checkbox"]:checked+.switch__handle {
+    transform: translateX(35px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 10px var(--primary-bg-color);
+}
+
+.switch__container input[type="checkbox"]:checked+.switch__background {
+    background-color: #0a0a0a;
+    box-shadow: inset 0 0 0 2px #1d1d1d;
+}
+
+.switch__container input[type="checkbox"]:checked+.switch__container:before {
+    content: "On";
+    color: var(--third-mode-color);
+    right: -15px;
+}
+
+.switch__container input[type="checkbox"]:checked+.switch__background .switch__handle {
+    transform: translateX(30px);
+    background-color: var(--third-mode-color);
+}
+
+.nav__right { 
+    display: flex;
+    gap: 15px;
+}
+
+.nav__right__element {
+    display: flex;
+    align-items: center;
+}
+
+.nav__right__element__link {
+    position: relative;
+    font-family: Kanit-regular;
+    color: var(--primary-text-color);
+}
+
+
+.nav__right__element__link:active:after,
+.nav__right__element__link:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.nav__right__element__link:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-bg-color);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: width, left;
+}
+
+.nav__icons {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .nav__icons {
+        display: flex;
+    }
+
+    .nav__icon__link {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        display: none;
+        width: 50px;
+    }
+    
+    .nav__icon__link-active {
+        display: flex;
+        z-index: 400;
+    }
+
+    .nav__icon__open {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav__icon__close {
+        width: 40px;
+        height: 50px;
+    }
+    
+    
+    
+
+    .nav__icon {
+        fill: var(--primary-text-color);
+    }
+
+    .nav__right {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        background: var(--primary-mode-color);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: translateX(650px);
+        transition: transform 0.3s ease;
+        box-sizing: border-box;
+    }
+    
+    .nav__right-active {
+        display: flex;
+        transform: translateX(0);
+    }
+    
+  }

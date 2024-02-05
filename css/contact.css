@@ -1,0 +1,166 @@
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 1080px);
+    box-sizing: border-box;
+}
+
+.contact__content {
+    display: flex;
+    gap: 20px;
+    max-width: 1080px;
+}
+
+.contact__cards__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.contact__card {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background: var(--fourth-mode-color);
+    border-left: 2px solid var(--primary-bg-color);
+    box-sizing: border-box;
+}
+
+.contact__card__icon {
+    fill: var(--third-text-color);
+}
+
+.contact__card__data__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.contact__card__data__title {
+    font-family: Inter;
+    font-size: 18px;
+    color: var(--third-text-color);
+    margin: 0;
+}
+
+.contact__card__data__text {
+    margin: 0;
+    font-family: Inter;
+    font-size: 12px;
+    color: var(--fourth-text-color);
+}
+
+
+.contact__sendEmail {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+    background: var(--fourth-mode-color);
+    border-left: 2px solid var(--primary-bg-color);
+}
+
+.contact__sendEmail__title {
+    font-family: Inter;
+    font-size: 23px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px 0;
+    color: var(--primary-text-color);
+}
+
+.contact__sendEmail__form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 5px;
+}
+
+.contact__sendEmail__input, .contact__sendEmail__message {
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    padding: 10px;
+    color: var(--fourth-text-color);
+    outline: none;
+    border-radius: 10px;
+    background: var(--third-mode-color);
+    box-sizing: border-box;
+}
+
+.contact__sendEmail__message {
+    resize: none;
+}
+
+.contact__sendEmail__input {
+    width: 400px;
+    height: 40px;
+}
+
+.contact__sendEmail__submit {
+    background: var(--third-bg-color);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contact__sendEmail__submit:hover { 
+    background: var(--primary-bg-color);
+}
+
+@media (max-width: 900px) {
+    
+    .contact__content {
+        flex-direction: column;
+    }
+
+    .contact__card, 
+    .contact__sendEmail {
+        border-left: 0;
+        border-bottom: 2px solid var(--primary-bg-color);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contact__content,
+    .contact__sendEmail__form, 
+    .contact__sendEmail__input {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .contact__content {
+        gap: 15px;
+    }
+
+    .contact__card {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .contact__card__data__title {
+        font-size: 16px
+    }
+
+    .contact__card__data__text {
+        font-size: 11px;overflow-wrap: break-word;
+    }
+
+}
