@@ -12,6 +12,7 @@
     --third-mode-color: #242424;
     --fourth-mode-color: #d9d9d908;
     --fifth-mode-color: #1A1A1A;
+    --sixth-mode-color: #000000;
 
     --scroll-mode-color: #282828;
 
@@ -20,7 +21,9 @@
     --third-bg-color: #16276b52;
 
     --profile-img: brightness(1);
-    --profile-img-hover: brightness(1.4)
+    --profile-img-hover: brightness(1.4);
+
+    --skills-mobile-shadow: drop-shadow(0px 0px 4px #16276B);
 }
 
 @font-face {
@@ -65,12 +68,13 @@ body.lightMode {
     --fourth-text-color: #303030;
     --fifth-text-color: rgba(31, 31, 31, 0.103); /* falta */
 
-    --background-color: #e0e0e0;
+    --background-color: #f7f7f7;
     --primary-mode-color: #ececec;
     --secondary-mode-color: #dddddd;
     --third-mode-color: #b8b8b8;
     --fourth-mode-color: #2727271f;
     --fifth-mode-color: #2424241f;
+    --sixth-mode-color: #bbbbbb;
 
     --scroll-mode-color: #d7d7d7;
 
@@ -80,6 +84,8 @@ body.lightMode {
 
     --profile-img: brightness(2);
     --profile-img-hover: brightness(2.5);
+
+    --skills-mobile-shadow: drop-shadow(0px 0px 2px #16276B);
 }
 
 body::-webkit-scrollbar {

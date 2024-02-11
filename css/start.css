@@ -1,6 +1,6 @@
 
 .content {
-    background: var(--tbackground-color);
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;

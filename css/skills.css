@@ -66,8 +66,7 @@
     }
 
     .skills__content__container__element__icon {
-
-        filter: drop-shadow(0px 0px 4px var(--primary-bg-color));
+        filter: var(--skills-mobile-shadow);
     }
 
 }

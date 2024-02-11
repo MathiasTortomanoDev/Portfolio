@@ -164,12 +164,18 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-    padding: 4px 20px;
-    border-bottom: 2px solid var(--primary-bg-color);
 }
 
 .about__category__nextQuestion {
     color: var(--third-text-color);
+    padding: 4px 20px;
+    border-bottom: 2px solid var(--primary-bg-color);
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.about__category__nextQuestion:hover {
+    background: linear-gradient(to top, var(--third-bg-color), transparent);
 }
 
 @media (max-width: 1080px) {
