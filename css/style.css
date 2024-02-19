@@ -14,6 +14,8 @@
     --fifth-mode-color: #1A1A1A;
     --sixth-mode-color: #000000;
 
+    --secondary-mode-color-transparent: #00000079;
+
     --scroll-mode-color: #282828;
 
     --primary-bg-color: #16276B;
@@ -27,23 +29,39 @@
 }
 
 @font-face {
-    font-family: Kanit-Bold;
-    src: url('../fonts/Kanit/Kanit-Bold.ttf');
+    font-family: 'Kanit-Bold';
+    src: url('../fonts/Kanit/Kanit-Bold.ttf') format('truetype'),
+         url('../fonts/Kanit/Kanit-Bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: Kanit-Regular;
-    src: url('../fonts/Kanit/Kanit-Regular.ttf');
+    font-family: 'Kanit-Regular';
+    src: url('../fonts/Kanit/Kanit-Regular.ttf') format('truetype'),
+         url('../fonts/Kanit/Kanit-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: Kanit-Medium;
-    src: url('../fonts/Kanit/Kanit-Medium.ttf');
+    font-family: 'Kanit-Medium';
+    src: url('../fonts/Kanit/Kanit-Medium.ttf') format('truetype'),
+         url('../fonts/Kanit/Kanit-Medium.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: Kanit-Light;
-    src: url('../fonts/Kanit/Kanit-ExtraLight.ttf');
+    font-family: 'Kanit-Light';
+    src: url('../fonts/Kanit/Kanit-ExtraLight.ttf') format('truetype'),
+         url('../fonts/Kanit/Kanit-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Kantumruy';
+    src: url('../fonts/Kantumruy/Kantumruy-Regular.ttf') format('truetype'),
+         url('../fonts/Kantumruy/Kantumruy-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Regular.ttf') format('truetype'),
+         url('../fonts/Inter/Inter-Regular.woff2') format('woff2');
 }
 
 html {
@@ -75,6 +93,8 @@ body.lightMode {
     --fourth-mode-color: #2727271f;
     --fifth-mode-color: #2424241f;
     --sixth-mode-color: #bbbbbb;
+    
+    --secondary-mode-color-transparent: #dddddd77;
 
     --scroll-mode-color: #d7d7d7;
 

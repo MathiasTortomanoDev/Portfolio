@@ -14,10 +14,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, var(--secondary-mode-color), transparent), url("../imgs/start-background.png");
+    background-image: image-set(
+        url("../imgs/start-background.avif") 1x,
+        url("../imgs/start-background.png") 1x
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom 40% center;
+}
+
+.start__background {
+    width: 100vw;
+    height: 100svh;
+    max-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, var(--secondary-mode-color), var(--secondary-mode-color-transparent));
 }
 
 .start__layout {
