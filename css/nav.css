@@ -127,7 +127,8 @@
 
 .nav__right__element__link {
     position: relative;
-    font-family: Kanit-regular;
+    font-family: Kanit;
+    font-weight: 400;
     color: var(--primary-text-color);
 }
 

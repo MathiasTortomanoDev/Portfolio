@@ -21,8 +21,8 @@
 
 .about__content__title {
     font-size: 40px;
-    font-family: Kanit-Regular;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 400;
     margin: 0 0 10px 0;
     color: var(--secondary-text-color);
     line-height: 40px;
@@ -82,8 +82,8 @@
 .about__question__title {
     color: var(--third-text-color);
     font-size: 40px;
-    font-family: Kanit-Regular;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0;
@@ -106,8 +106,8 @@
 .about__question__category__title {
     color: var(--secondary-text-color);
     font-size: 30px;
-    font-family: Kanit-Light;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 200;
     text-align: center;
     text-transform: uppercase;
     margin: 10px 0;
@@ -131,15 +131,16 @@
     font-size: 22px;
     line-height: 24px;
     margin-right: 40px;
-    font-family: Kanit-Regular;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 400;
 }
 
 .about__category__index__container {
     position: absolute;
     right: 20px;
     font-size: 15px;
-    font-family: Kanit-Medium;
+    font-family: Kanit;
+    font-weight: 600;
     color: var(--fourth-text-color);
 }
 

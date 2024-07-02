@@ -6,8 +6,8 @@
     --fourth-text-color: #AEAEAE;
     --fifth-text-color: rgba(255, 255, 255, 0.035);
 
-    --background-color: #101010;
-    --primary-mode-color: #0e0e0e;
+    --background-color: #121212;
+    --primary-mode-color: #0c0c0c;
     --secondary-mode-color: #000000;
     --third-mode-color: #242424;
     --fourth-mode-color: #d9d9d908;
@@ -29,25 +29,32 @@
 }
 
 @font-face {
-    font-family: 'Kanit-Bold';
-    src: url('../fonts/Kanit/Kanit-Bold.ttf') format('truetype'),
-         url('../fonts/Kanit/Kanit-Bold.woff2') format('woff2');
+    font-family: 'Kanit';
+    font-weight: 800;
+    font-size: 800;
+    src: url('../fonts/Kanit/Kanit-SemiBold.ttf') format('truetype')
 }
 
 @font-face {
-    font-family: 'Kanit-Regular';
+    font-family: 'Kanit';
+    font-weight: 400;
+    font-size: 400;
     src: url('../fonts/Kanit/Kanit-Regular.ttf') format('truetype'),
          url('../fonts/Kanit/Kanit-Regular.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Kanit-Medium';
+    font-family: 'Kanit';
+    font-weight: 600;
+    font-size: 600;
     src: url('../fonts/Kanit/Kanit-Medium.ttf') format('truetype'),
          url('../fonts/Kanit/Kanit-Medium.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'Kanit-Light';
+    font-family: 'Kanit';
+    font-weight: 200;
+    font-size: 200;
     src: url('../fonts/Kanit/Kanit-ExtraLight.ttf') format('truetype'),
          url('../fonts/Kanit/Kanit-ExtraLight.woff2') format('woff2');
 }
@@ -172,7 +179,8 @@ a {
 
 .section__title__shadow {
     color: var(--fifth-text-color);
-    font-family: Kanit-Medium;
+    font-family: Kanit;
+    font-weight: 600;
     font-size: 180px;
     text-transform: uppercase;
     text-align: center;
@@ -185,9 +193,9 @@ a {
 
 .section__title {
     color: var(--primary-text-color);
-    font-family: Kanit-Light;
+    font-family: Kanit;
+    font-weight: 200;
     font-size: 90px;
-    font-weight: 100;
     text-transform: uppercase;
     text-align: center;
     line-height: 60px;

@@ -62,16 +62,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px;
-    gap: 20px;
+    padding: 15px 25px;
+    line-height: 30px;
+    gap: 15px;
     background: var(--fourth-mode-color);
     border-left: 2px solid var(--primary-bg-color);
 }
 
 .contact__sendEmail__title {
-    font-family: Inter;
-    font-size: 23px;
-    font-weight: 100;
+    font-family: Kanit;
+    font-size: 28px;
+    font-weight: 400;
     text-align: center;
     margin: 10px 0;
     color: var(--primary-text-color);

@@ -23,7 +23,8 @@
 
 .skills__content__container__title {
     font-size: 25px;
-    font-family: Kanit-Regular;
+    font-family: Kanit;
+    font-weight: 400;
     line-height: 30px;
     margin: 0;
     color: var(--fourth-text-color);

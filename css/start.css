@@ -81,8 +81,8 @@
 
 .introduction__subtitle {
     color: var(--third-text-color);
-    font-family: Kanit-Regular;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 400;
     font-size: 25px;
     line-height: 20px;
     margin: 0;
@@ -91,8 +91,8 @@
 
 .introduction__name {
     color: var(--secondary-text-color);
-    font-family: Kanit-Medium;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 600;
     font-size: 100px;
     line-height: 80px;
     margin: 0;
@@ -100,14 +100,16 @@
 
 .introduction__surname {
     display: block;
-    font-family: Kanit-Light;
+    font-family: Kanit;
+    font-weight: 200;
     font-size: 60px;
     line-height: 50px;
 }
 
 .introduction__download {
     color: var(--fourth-text-color);
-    font-family: Kanit-Light;
+    font-family: Kanit;
+    font-weight: 200;
     font-size: 25px;
     padding: 2px 28px;
     border: 2px solid var(--primary-bg-color);
@@ -161,7 +163,8 @@
 }
 
 .start__goPortfolio__link {
-    font-family: Kanit-Light;
+    font-family: Kanit;
+    font-weight: 200;
     font-size: 14px;
     line-height: 10px;
     color: var(--third-text-color);
